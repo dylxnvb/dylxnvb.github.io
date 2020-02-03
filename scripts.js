@@ -13,7 +13,7 @@ function myFunction() {
     var x = document.getElementById("mySearch").value;
     var request = new XMLHttpRequest();
 
-    request.open('GET','https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + x + '?api_key=' + api_key,true)
+    request.open('GET','https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + x + '?api_key=' + api_key,true)
     request.onload = function () {
 
         var data = JSON.parse(this.response);
